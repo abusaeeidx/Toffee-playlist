@@ -1,9 +1,9 @@
-name: Fetch NS_player.m3u Every 20 Minutes
+name: Fetch playlist
 
 on:
   schedule:
-    - cron: '*/20 * * * *'  # Runs every 20 minutes
-  workflow_dispatch:        # Optional manual trigger
+    - cron: '*/20 * * * *' 
+  workflow_dispatch:        
 
 jobs:
   fetch-and-save:
