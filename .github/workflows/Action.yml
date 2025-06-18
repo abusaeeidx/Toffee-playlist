@@ -1,0 +1,30 @@
+name: Fetch NS_player.m3u Every 20 Minutes
+
+on:
+  schedule:
+    - cron: '*/20 * * * *'  # Runs every 20 minutes
+  workflow_dispatch:        # Optional manual trigger
+
+jobs:
+  fetch-and-save:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Fetch m3u content
+        run: |
+          curl -sL "https://xfireflix.fun/toffee/playlist.m3u" -o NS_player.m3u
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+          if [ -n "$(git status --porcelain)" ]; then
+            git add NS_player.m3u
+            git commit -m "Update NS_player.m3u [$(date '+%Y-%m-%d %H:%M:%S')]"
+            git push
+          else
+            echo "No changes detected."
+          fi
