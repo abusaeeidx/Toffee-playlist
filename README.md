@@ -23,9 +23,7 @@
   <a href="#">
     <img src="https://img.shields.io/badge/Made%20in-Bangladesh_🇧🇩-green?colorA=%23ff0000&colorB=%23017e40&style=flat-square" alt="Bangladesh">
   </a>
-  <a href="https://hits.seeyoufarm.com">
-    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FAbusaeeid%2FToffee-Channels-Link-Headers&count_bg=%2379C83D&title_bg=%23555555&icon=mattermost.svg&icon_color=%23E7E7E7&title=Visitors+&edge_flat=false" alt="Visitors">
-  </a>
+   
 </p>
 
 <h1 align="center">
@@ -68,7 +66,7 @@
 
 * Use **Network Stream Player** – [Download](https://play.google.com/store/apps/details?id=com.genuine.leone)
 * Add playlist: [NS Player Playlist](https://raw.githubusercontent.com/abusaeeidx/Toffee-playlist/refs/heads/main/NS_player.m3u)
-* Short Link: [https://s.id/21HEP](https://s.id/21HEP)
+* Short Link: []()
 
 ### 📺 Android TV
 
