@@ -99,6 +99,15 @@
 
 ## 💰 Support
 
+### 🎁 Free Donation – Just Click
+Your clicks make a difference 
+
+Help us keep this project alive and growing — **without spending a penny**.  
+Every time you click an ad, you're giving a **free donation** — like handing us a virtual coffee ☕ — powered by ads!
+
+### [✨ Click Here to Donate for Free! ✨](https://abusaeeidx.github.io/Support/)
+
+> ✅ 100% Free | ❌ No Payment Needed | 🖱️ Just One Click = Big Help!
 
 ---
 
