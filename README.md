@@ -67,14 +67,13 @@
 ### 📱 Android
 
 * Use **Network Stream Player** – [Download](https://play.google.com/store/apps/details?id=com.genuine.leone)
-* Add playlist: [NS Player Playlist](https://raw.githubusercontent.com/Jeshan-akand/Toffee-Channels-Link-Headers/main/toffee_NS_Player.m3u)
+* Add playlist: [NS Player Playlist](https://raw.githubusercontent.com/abusaeeidx/Toffee-playlist/refs/heads/main/NS_player.m3u)
 * Short Link: [https://s.id/21HEP](https://s.id/21HEP)
 
 ### 📺 Android TV
 
 * Use **OTT Navigator** – [Download](https://apkpure.com/ott-navigator-iptv/studio.scillarium.ottnavigator/amp)
-* Add playlist: [OTT Playlist](https://raw.githubusercontent.com/Jeshan-akand/Toffee-Channels-Link-Headers/main/toffee_OTT_Navigator.m3u)
-* Short Link: [https://s.id/21HEV](https://s.id/21HEV)
+* Add playlist: [OTT Playlist](https://raw.githubusercontent.com/abusaeeidx/Toffee-playlist/refs/heads/main/NS_player.m3u)* Short Link: []()
 
 <h1 align="center">
  <img src="https://github.com/Jeshan-akand/Toffee-Channels-Link-Headers/blob/main/images/ns_player.jpg">
