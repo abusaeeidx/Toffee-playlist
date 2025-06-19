@@ -84,7 +84,7 @@
 
 ## 🚬 Credits
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code\&pause=100\&color=FF2C10\&background=31FF9400\&width=400\&lines=Made+By+Byte+Capsule)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code\&pause=100\&color=FF2C10\&background=31FF9400\&width=400\&lines=Made+By+Abu+Saeeid+X+Noob)](https://git.io/typing-svg)
 
 ---
 
@@ -99,15 +99,10 @@
 
 ## 💰 Support
 
-<a href="https://www.buymeacoffee.com/jeshanakanc" target="_blank">
-  <img src="https://www.buymeacoffee.com/assets/img/custom_images/purple_img.png" alt="Buy Me A Coffee" width="174">
-</a>
 
 ---
 
 ## ✉️ Contact Me
 
-* [GitHub](https://github.com/byte-capsule)
-* [Email](mailto:jeshanakand2017@gmail.com)
-* [Telegram](https://t.me/J_9X_H_9X_N)
-* [Facebook Messenger](https://t.me/J_9X_H_9X_N)
+* [GitHub](https://github.com/abusaeeidx)
+* [Telegram](https://t.me/abusaeeidx)
