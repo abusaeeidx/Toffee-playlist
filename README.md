@@ -4,18 +4,18 @@
     <img src="https://github.com/Jeshan-akand/Toffee-Channels-Link-Headers/blob/main/images/toffee_logo.jpeg" alt="🔥 Toffee 🔥" width="200">
   </a>
   <br>
-  🔥 Toffee Channels Auto-Updater 🔥
+  🔥Toffee Playlist🔥
   <br>
 </h1>
 
-<h2 align="center">Auto-updating script for Toffee App Channel Links and Headers (every 30 minutes)</h2>
+<h2 align="center">Auto-updating script for Toffee App Channel Links and Headers (every 3 hours)</h2>
 
 <p align="center">
   <a href="https://www.python.org/">
     <img src="https://img.shields.io/badge/Made_With-Python_3.12%2B-blue" alt="Python">
   </a>
-  <a href="mailto:bullredeyes@gmail.com">
-    <img src="https://img.shields.io/badge/Byte_Capsule-%E2%98%BC-green.svg" alt="Byte Capsule">
+  <a href="mailto:">
+    <img src="https://img.shields.io/badge/Byte_Capsule-%E2%98%BC-green.svg" alt="abusaeid">
   </a>
   <a href="https://play.google.com/store/apps/details?id=com.banglalink.toffee">
     <img src="https://img.shields.io/badge/App-Toffee_Live-purple" alt="Toffee App">
@@ -44,7 +44,7 @@
 
 ## 💥 Key Features
 
-* ⏰ Updates every 3 minutes using GitHub Actions
+* ⏰ Updates every 3 hours using GitHub Actions
 * 🎥 Includes premium & standard channel streams
 * ✅ Working stream links (.m3u8)
 * ✉ Includes all necessary HTTP headers (Cookie, User-Agent, etc.)
@@ -59,25 +59,6 @@
 
 ➡️ [Toffee Channels JSON](https://raw.githubusercontent.com/Jeshan-akand/Toffee-Channels-Link-Headers/main/toffee_channel_data.json)
 
-```python
-import requests
-
-link = "https://raw.githubusercontent.com/Jeshan-akand/Toffee-Channels-Link-Headers/main/toffee_channel_data.json"
-data = requests.get(link).json()
-
-for channel in data["channels"]:
-    url = channel["link"]
-    headers = channel["headers"]
-    print("\u2713 Channel Link:", url)
-    print("\u2713 Headers:", headers)
-
-    response = requests.get(url, headers=headers)
-    print("\u2713 Server Response:\n", response.text)
-```
-
-> Works with **Python 3+**, but you can adapt it to any programming language.
-
----
 
 ---
 
