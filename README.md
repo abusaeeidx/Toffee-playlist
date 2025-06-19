@@ -30,7 +30,7 @@
 
 <h1 align="center">
   <a href="https://raw.githubusercontent.com/abusaeeidx/Toffee-playlist/refs/heads/main/image/tv-.jpeg">
-    <img src="https://raw.githubusercontent.com/abusaeeidx/Toffee-playlist/refs/heads/main/image/db2.jpeg">
+    <img src="https://raw.githubusercontent.com/abusaeeidx/Toffee-playlist/refs/heads/main/image/tv-.jpeg">
   </a>
 </h1>
 
