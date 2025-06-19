@@ -1,7 +1,7 @@
 <h1 align="center">
   <br>
   <a href="https://play.google.com/store/apps/details?id=com.banglalink.toffee">
-    <img src="https://github.com/Jeshan-akand/Toffee-Channels-Link-Headers/blob/main/images/toffee_logo.jpeg" alt="🔥 Toffee 🔥" width="200">
+    <img src="https://raw.githubusercontent.com/abusaeeidx/Toffee-playlist/refs/heads/main/image/db2.jpeg" alt="🔥 Toffee 🔥" width="200">
   </a>
   <br>
   🔥Toffee Playlist🔥
@@ -15,7 +15,7 @@
     <img src="https://img.shields.io/badge/Made_With-Python_3.12%2B-blue" alt="Python">
   </a>
   <a href="mailto:">
-    <img src="https://img.shields.io/badge/Byte_Capsule-%E2%98%BC-green.svg" alt="abusaeid">
+    <img src="https://img.shields.io/badge/Abu_SAEEID-%E2%98%BC-green.svg" alt="abusaeid">
   </a>
   <a href="https://play.google.com/store/apps/details?id=com.banglalink.toffee">
     <img src="https://img.shields.io/badge/App-Toffee_Live-purple" alt="Toffee App">
@@ -24,13 +24,13 @@
     <img src="https://img.shields.io/badge/Made%20in-Bangladesh_🇧🇩-green?colorA=%23ff0000&colorB=%23017e40&style=flat-square" alt="Bangladesh">
   </a>
   <a href="https://hits.seeyoufarm.com">
-    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fbyte-capsule%2FToffee-Channels-Link-Headers&count_bg=%2379C83D&title_bg=%23555555&icon=mattermost.svg&icon_color=%23E7E7E7&title=Visitors+&edge_flat=false" alt="Visitors">
+    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FAbusaeeid%2FToffee-Channels-Link-Headers&count_bg=%2379C83D&title_bg=%23555555&icon=mattermost.svg&icon_color=%23E7E7E7&title=Visitors+&edge_flat=false" alt="Visitors">
   </a>
 </p>
 
 <h1 align="center">
-  <a href="https://github.com/Jeshan-akand/Toffee-Channels-Link-Headers/blob/main/images/banner.jpeg">
-    <img src="https://github.com/Jeshan-akand/Toffee-Channels-Link-Headers/blob/main/images/banner.jpeg">
+  <a href="https://raw.githubusercontent.com/abusaeeidx/Toffee-playlist/refs/heads/main/image/db2.jpeg">
+    <img src="https://raw.githubusercontent.com/abusaeeidx/Toffee-playlist/refs/heads/main/image/db2.jpeg">
   </a>
 </h1>
 
@@ -57,7 +57,7 @@
 
 **Auto-updated JSON file:**
 
-➡️ [Toffee Channels JSON](https://raw.githubusercontent.com/Jeshan-akand/Toffee-Channels-Link-Headers/main/toffee_channel_data.json)
+➡️ [Toffee Channels JSON]()
 
 
 ---
