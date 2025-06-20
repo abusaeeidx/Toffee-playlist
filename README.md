@@ -74,7 +74,7 @@
 * Add playlist: [OTT Playlist](https://raw.githubusercontent.com/abusaeeidx/Toffee-playlist/refs/heads/main/NS_player.m3u)* Short Link: []()
 
 <h1 align="center">
- <img src="https://raw.githubusercontent.com/abusaeeidx/Toffee-playlist/refs/heads/main/image/IMG_20250620_034255.jpg">
+ <img style="height: 180px; background: lightblue;" src="https://raw.githubusercontent.com/abusaeeidx/Toffee-playlist/refs/heads/main/image/IMG_20250620_034255.jpg">
 </h1>
 <h1 align="center">
  <img src="https://github.com/Jeshan-akand/Toffee-Channels-Link-Headers/blob/main/images/ott_view.jpg">
