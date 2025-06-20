@@ -28,7 +28,7 @@
 
 <h1 align="center">
   <a href="https://raw.githubusercontent.com/abusaeeidx/Toffee-playlist/refs/heads/main/image/tv-.jpeg">
-    <img src="https://raw.githubusercontent.com/abusaeeidx/Toffee-playlist/refs/heads/main/image/tv-.jpeg">
+    <img src="https://raw.githubusercontent.com/abusaeeidx/Toffee-playlist/refs/heads/main/image/mobile.jpeg">
   </a>
 </h1>
 
