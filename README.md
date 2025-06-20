@@ -1,7 +1,7 @@
 <h1 align="center">
   <br>
   <a href="https://play.google.com/store/apps/details?id=com.banglalink.toffee">
-    <img src="https://raw.githubusercontent.com/abusaeeidx/Toffee-playlist/refs/heads/main/image/in2.jpg" alt="🔥 Toffee 🔥" width="170">
+    <img src="https://raw.githubusercontent.com/abusaeeidx/Toffee-playlist/refs/heads/main/image/rd-logi.png" alt="🔥 Toffee 🔥" width="80%">
   </a>
   <br>
   🔥Toffee Playlist🔥
