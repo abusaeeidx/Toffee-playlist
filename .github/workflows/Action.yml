@@ -3,7 +3,7 @@ name: Fetch playlist
 on:
   schedule:
     - cron: '0 */3 * * *'
-  workflow_dispatch:        
+  workflow_dispatch:
 
 jobs:
   fetch-and-save:
@@ -14,8 +14,10 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Fetch m3u content
+        env:
+          PLAYLIST_URL: ${{ secrets.PLAYLIST_URL }}
         run: |
-          curl -sL "https://xfireflix.fun/toffee/playlist.m3u" -o NS_player.m3u
+          curl -sL "$PLAYLIST_URL" -o NS_player.m3u
 
       - name: Commit and push if changed
         run: |
