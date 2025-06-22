@@ -18,13 +18,13 @@ jobs:
 
       - name: Download NS_player.m3u (raw m3u)
         env:
-          PLAYLIST_URL: ${{ secrets.PLAYLIST_URL }}
+          API_URL: ${{ secrets.API_URL }}
         run: |
-          curl -sL "$PLAYLIST_URL" -o NS_player.m3u
+          curl -sL "$API_URL" -o NS_player.m3u
 
       - name: Download JSON and convert to ott_navigator.m3u
         env:
-          JSON_URL: ${{ secrets.PLAYLIST_URL }}
+          JSON_URL: ${{ secrets.API_URL }}
         run: |
           echo "#EXTM3U" > ott_navigator.m3u
 
