@@ -55,7 +55,7 @@
 
 **Auto-updated JSON file:**
 
-➡️ [Toffee Channels JSON](https://raw.githubusercontent.com/abusaeeidx/Toffee-playlist/refs/heads/main/api.json)
+➡️ [Toffee Channels JSON](https://raw.githubusercontent.com/abusaeeidx/Toffee-playlist/refs/heads/main/script_api/data.json)
 
 
 ---
