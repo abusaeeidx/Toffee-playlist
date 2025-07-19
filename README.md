@@ -71,7 +71,7 @@
 ### 📺 Android TV
 
 * Use **OTT Navigator** – [Download](https://apkpure.com/ott-navigator-iptv/studio.scillarium.ottnavigator/amp)
-* Add playlist: [OTT Playlist](https://raw.githubusercontent.com/abusaeeidx/Toffee-playlist/refs/heads/main/NS_player.m3u)* Short Link: []()
+* Add playlist: [OTT Playlist](https://raw.githubusercontent.com/abusaeeidx/Toffee-playlist/refs/heads/main/ott_navigator.m3u)* Short Link: []()
 
 <h1 align="center">
  <img style="height: 80%;" src="https://raw.githubusercontent.com/abusaeeidx/Toffee-playlist/refs/heads/main/image/IMG_20250620_034255.jpg">
