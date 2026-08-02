@@ -6,35 +6,46 @@ on:
     - cron: "0 * * * *"
 
 jobs:
-  update-playlist:
+  update:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Download Primary
+      - name: Download M3U
         run: |
-          curl -L --fail "${{ secrets.PRIMARY_URL }}" -o source.m3u || true
+          curl -L --fail "${{ secrets.PRIMARY_URL }}" -o ott_navigator.m3u
 
-      - name: Validate Or Fallback
+      - name: Download JSON
         run: |
-          if [ ! -f source.m3u ] || ! grep -q "#EXTM3U" source.m3u; then
-            curl -L --fail "${{ secrets.FALLBACK_URL }}" -o source.m3u
-          fi
+          curl -L --fail "${{ secrets.JSON_URL }}" -o NS_player.json
 
-      - name: Build Final Playlist
+      - name: Add playbacks_url fields
         run: |
-          grep -v "Welcome" source.m3u > clean.m3u
+          jq '
+            map(
+              . as $o
+              | ($o.name
+                  | ascii_downcase
+                  | gsub("[^a-z0-9]+";"_")
+                  | gsub("^_|_$";"")
+                ) as $key
+              | .single_playbacks_url = (.link + "|cookie=" + .cookie)
+              | . + {
+                  ($key + "_playbacks_url"): (.link + "|cookie=" + .cookie)
+                }
+            )
+          ' NS_player.json > tmp.json
 
-          echo "#EXTM3U" > ott_navigator.m3u
-          echo "${{ secrets.CUSTOM_CHANNEL_B64 }}" | base64 -d >> ott_navigator.m3u
-          echo "" >> ott_navigator.m3u
-          grep -v "^#EXTM3U" clean.m3u >> ott_navigator.m3u
+          mv tmp.json NS_player.json
 
       - name: Commit & Push
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add ott_navigator.m3u
-          git commit -m "Auto update playlist secure" || exit 0
+
+          git add ott_navigator.m3u NS_player.json
+
+          git commit -m "Auto update files" || exit 0
           git push
