@@ -21,11 +21,11 @@ jobs:
         run: |
           echo "#EXTM3U" > ott_navigator.m3u
 
-          # Add custom channel from GitHub Secret (Base64 encoded)
+          # Add custom channel
           echo "${{ secrets.CUSTOM_CHANNEL_B64 }}" | base64 -d >> ott_navigator.m3u
           echo "" >> ott_navigator.m3u
 
-          # Append downloaded playlist without duplicate header
+          # Append downloaded playlist (skip duplicate header)
           grep -v "^#EXTM3U" source.m3u >> ott_navigator.m3u
 
       - name: Download JSON
@@ -51,12 +51,20 @@ jobs:
 
           mv tmp.json NS_player.json
 
+      - name: Create temp.cache
+        run: |
+          # Same JSON without [ ]
+          sed '1s/^\[//;$s/\]$//' NS_player.json > temp.cache
+
       - name: Commit & Push
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
 
-          git add ott_navigator.m3u NS_player.json
+          git add \
+            ott_navigator.m3u \
+            NS_player.json \
+            temp.cache
 
           git commit -m "Auto update playlist & JSON" || exit 0
           git push
