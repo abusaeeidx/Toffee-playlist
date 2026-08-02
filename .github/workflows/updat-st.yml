@@ -21,7 +21,7 @@ jobs:
         run: |
           echo "#EXTM3U" > ott_navigator.m3u
 
-          # Add custom channel
+          # Add custom channel (Base64 encoded)
           echo "${{ secrets.CUSTOM_CHANNEL_B64 }}" | base64 -d >> ott_navigator.m3u
           echo "" >> ott_navigator.m3u
 
@@ -32,8 +32,9 @@ jobs:
         run: |
           curl -L --fail "${{ secrets.JSON_URL }}" -o NS_player.json
 
-      - name: Add playbacks_url fields
+      - name: Update JSON & Generate Temp Files
         run: |
+          # Update NS_player.json
           jq '
             map(
               . as $item
@@ -51,20 +52,37 @@ jobs:
 
           mv tmp.json NS_player.json
 
-      - name: Create temp.cache
-        run: |
-          # Same JSON without [ ]
-          sed '1s/^\[//;$s/\]$//' NS_player.json > temp.cache
+          # Create temp folder
+          rm -rf temp
+          mkdir -p temp
+
+          # Create temp/{id}.json
+          jq -c '.[]' NS_player.json | while read -r item; do
+            id=$(echo "$item" | jq -r '.id')
+
+            key=$(echo "$item" | jq -r '.name' \
+              | tr '[:upper:]' '[:lower:]' \
+              | sed -E 's/[^a-z0-9]+/_/g;s/^_+|_+$//g')
+
+            value=$(echo "$item" | jq -r '.link + "|cookie=" + .cookie')
+
+            jq -n \
+              --arg key "${key}_playbacks_url" \
+              --arg value "$value" \
+              '{
+                playbacks_url: $value
+              } + {
+                ($key): $value
+              }' > "temp/${id}.json"
+          done
 
       - name: Commit & Push
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
 
-          git add \
-            ott_navigator.m3u \
-            NS_player.json \
-            temp.cache
+          git add ott_navigator.m3u NS_player.json temp/
 
           git commit -m "Auto update playlist & JSON" || exit 0
+
           git push
