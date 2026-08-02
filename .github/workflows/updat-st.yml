@@ -10,12 +10,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
       - name: Download M3U
         run: |
-          curl -L --fail "${{ secrets.PRIMARY_URL }}" -o ott_navigator.m3u
+          curl -L --fail "${{ secrets.PRIMARY_URL }}" -o source.m3u
+
+      - name: Build Final M3U
+        run: |
+          echo "#EXTM3U" > ott_navigator.m3u
+
+          # Add custom channel from GitHub Secret (Base64 encoded)
+          echo "${{ secrets.CUSTOM_CHANNEL_B64 }}" | base64 -d >> ott_navigator.m3u
+          echo "" >> ott_navigator.m3u
+
+          # Append downloaded playlist without duplicate header
+          grep -v "^#EXTM3U" source.m3u >> ott_navigator.m3u
 
       - name: Download JSON
         run: |
@@ -25,8 +36,8 @@ jobs:
         run: |
           jq '
             map(
-              . as $o
-              | ($o.name
+              . as $item
+              | ($item.name
                   | ascii_downcase
                   | gsub("[^a-z0-9]+";"_")
                   | gsub("^_|_$";"")
@@ -47,5 +58,5 @@ jobs:
 
           git add ott_navigator.m3u NS_player.json
 
-          git commit -m "Auto update files" || exit 0
+          git commit -m "Auto update playlist & JSON" || exit 0
           git push
